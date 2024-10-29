@@ -1,107 +1,47 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 
 <head>
-  <style>
-    .div1 {
-      font-weight: bold;
-      background-color: pink;
-      margin-left: 10%;
-      margin-right: 10%;
-      margin-top: 5%;
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-top: 25px;
-      padding-bottom: 25px;
-      font-size: 25px;
-      color: darkslategray;
-    }
-
-
-    body {
-      background-color: greenyellow;
-      margin: 0%;
-    }
-
-    marquee {
-      Font-size: 100px;
-      color: red;
-      background-color: black;
-      font-weight: bold;
-    }
-
-    img {
-      width: 100%;
-    }
-
-    /* Navbar styling */
-nav {
-    background: darkmagenta; /* Background color for the navbar */
-    color: hotpink; /* Text color */
-    padding: 25px; /* Padding inside the navbar */
-    display: flex; /* Flexbox layout to align items */
-    justify-content: space-between; /* Space between title and links */
-    align-items: center; /* Vertically center the items */
-    margin-bottom: 20px; /* Space below the navbar */
-}
-
-h1 {
-    margin: 0; /* Remove default margin */
-    font-size: 35px; /* Font size for the website title */
-}
-
-#nav-ul {
-    list-style-type: none; /* Remove default list bullets */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    display: flex; /* Flexbox layout for horizontal list items */
-}
-
-.nav-li {
-    margin: 0 25px; /* Space between each navigation item */
-}
-
-a {
-    color: hotpink; /* Link text color */
-    text-decoration: none; /* Remove underline from links */
-    font-size: 30px;
-}
-
-/* Add a hover effect for the navigation links */
-a:hover {
-    color: #ffeb3b; /* Change color on hover */
-}
-
-
-  </style>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>My Websiteo</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Ethan's Awesome Website</title>
 </head>
 
 <body>
-  <nav>
-    <h1> Ethan Taylor</h1>
-    <ul id="nav-ul">
-        <li class="nav-li"><a href="index.html">Home</a></li>
-        <li class="nav-li"><a href="portfolio.html">Portfolio</a></li>
-    </ul>
-</nav>
+    <!-- All content goes here -->
+    <div id="all-contents">
+    <nav>
+        <h1>Ethan Ray Taylor's Super Website</h1>
+        <ul id="nav-ul">
+            <li class="nav-li">
+                <a href="index.html"> Home </a>
+            </li>
+            <li class="nav-li">
+                <a href="portfolio.html"> Portfolio </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+    <main>
+        <!-- Sidebar section -->
+        <div class="sidebar">
+            <img class="sidebar-img" src="https://tse1.mm.bing.net/th/id/OIP.Hu6BbuEfG73vVYEHekBDkgHaHo?rs=1&pid=ImgDetMain">
+        </div>
 
-  <div class="div1">
-    <p> Hi im Ethan Taylor, a student at Lakeshore High School.
-      <p> I like:</p>
-      <ul>
-        <li>Cheesecake</li>
-        <li>Rollercoasters</li>
-        <li>Having fun</li>
-      </ul>
-      
-    <img src="https://tse2.mm.bing.net/th/id/OIP.Ohn01RBG3_touIW8X6dWUwHaEK?rs=1&pid=ImgDetMain">
-    <marquee> I AM EVIL JONKLER I AM EVIL JONKLER I AM JEVIL ONKLER I AM EVIL JONKLER I AM EVIL JONKLER I AM EVIL
-      JONKLER I AM EVIL JONKLER I AM EVIL JONKLER I AM EVIL JONKLER</marquee>
-
-  </div>
+        <!-- Content section -->
+        <div class="content">
+            <h2>Ethan Taylor </h2>
+            <p> Student at Lakeshore High</p>
+            <!-- Interests section -->
+            <div id="interests">
+                <h3>Interests</h3>
+                <ul>
+                    <li>Giraffes</li>
+                    <li>Rollercoasters</li>
+                    <li>Videogames</li>
+                </ul>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>

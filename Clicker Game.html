@@ -10,6 +10,15 @@
             width: 40%;
         }
 
+        #upgrade{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10%;
+        
+        }
+
+
         #counter {
             text-align: center;
         }
@@ -22,6 +31,7 @@
 
     <p id="counter"> Score: 0 </p>
 
+    <img src="https://th.bing.com/th/id/R.68835c7d0a6a28a82ba3a23d06080859?rik=h1xc%2bvuBh3r2vw&pid=ImgRaw&r=0" id="upgrade">
 </body>
 
 </html>
@@ -30,12 +40,21 @@
 
     document.getElementById("centered").addEventListener("click", up)
 
-    var score = 0
+    var score = 0;
     function up() {
-        score = score + 1
+        score = score + 1;
         document.getElementById("counter").innerHTML = "Score: "+ score;
         console.log(score)
     }
    
+    document.getElementById("upgrade").addEventListener("click", upgrades)
+
+    var scoreperclick= 1;
+    function upgrades() {
+        score = score-10;
+        scoreperclick= scoreperclick + 1;
+        document.getElementById("counter").innerHTML = "Score: "+ score;
+        console.log(score)
+    }
 
 </script>
