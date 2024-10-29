@@ -11,11 +11,12 @@ body {
 
 /* navigation menu */
 nav {
-    background: rgb(239, 80, 41);
+    background: rgb(83, 139, 241);
    margin: 0 auto;
    margin-bottom: 20px;
     display: flex;
     padding: 10px;
+    border-radius: 10px;
 }
 h1 {
     display: flex;
@@ -38,8 +39,9 @@ a {
 
 /* main container area beneath menu */
 main {
-    background: rgb(245, 238, 219);
+    background: rgb(212, 243, 191);
     display: flex;
+    border-radius:10px;
 }
 .sidebar {
     margin-right: 25px;
@@ -47,6 +49,7 @@ main {
 }
 .sidebar-img {
     width: 200px;
+    border-radius:25px;
 }
 .content {
     flex: 1;
@@ -60,4 +63,30 @@ main {
 }
 h2, h3 {
     margin: 0px;
+}
+
+ /* portfolio styles */
+ .content h1 {
+    color: black;
+}
+
+#portfolio {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#portfolio li {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#portfolio li:hover {
+    background: #eee;
+}
+
+#portfolio a {
+    text-decoration: none;
+    color: #454545;
 }
