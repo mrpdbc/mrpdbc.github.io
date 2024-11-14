@@ -3,10 +3,15 @@
 
 <head>
     <style>
-             body {
+        body {
             overflow: hidden;
             user-select: none;
         }
+
+        #wholePage{
+            height: 100vh;
+        }
+
         #centered {
             display: block;
             margin-left: auto;
@@ -14,33 +19,44 @@
             width: 40%;
         }
 
-        #scoreChangers {
+        #upgrade1 {
             text-align: center;
+
         }
-     
+
+
+        #upgrade2 {
+            text-align: center;
+
+        }
+
         #counter {
             text-align: center;
         }
     </style>
 </head>
 
-<body>
-<div id="scoreChangers">
-    <img src="https://tse1.mm.bing.net/th/id/OIP.A8xPd01DBTd0q78ShUdtgAHaHa?rs=1&pid=ImgDetMain" id="centered">
+<body id="body">
+    <div id="wholePage">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.A8xPd01DBTd0q78ShUdtgAHaHa?rs=1&pid=ImgDetMain" id="centered">
 
-    <p id="counter"> Score: 0 </p>
+        <div id="textContainer">
+            <p id="counter"> Score: 0 </p>
 
-    <p id="upgrade1"> Upgrade 1 Cost: 10 </p>
+            <p id="upgrade1"> Upgrade 1 Cost: 10 </p>
 
-    <p id="upgrade2"> Upgrade 2 Cost: 1000 </p>
-
-    <p id="prestige"> Prestige Cost: 1000000 </p>
-</div>
+            <p id="upgrade2"> Upgrade 2 Cost: 1000 </p>
+        </div>
+    </div>
 </body>
 
 </html>
 
 <script>
+    var rotateScore = 0
+    var rotateText = 0
+    var rotatePage = 0
+    var rotateDocument = 0
 
     document.getElementById("centered").addEventListener("click", up)
     var score = 0;
@@ -48,6 +64,20 @@
         score = score + scoreperclick;
         document.getElementById("counter").innerHTML = "Score: " + score;
         console.log(score)
+    }
+
+    setInterval(rotation, 15)
+    function rotation() {
+        rotateScore = rotateScore + score / 10
+        rotateText = rotateText + score / 100
+        rotatePage = rotatePage + score / 1000
+        rotateDocument = rotateDocument + score / 10000
+        document.getElementById("counter").style.rotate = rotateScore + "deg"
+        document.getElementById("upgrade1").style.rotate = rotateScore + "deg"
+        document.getElementById("upgrade2").style.rotate = rotatePage + "deg"
+        document.getElementById("textContainer").style.rotate = rotateText + "deg"
+        document.getElementById("wholePage").style.transform = "skewY(" + rotateDocument + "deg)"
+        document.getElementById("wholePage").style.rotate = rotatePage + "deg"
     }
 
     document.getElementById("upgrade1").addEventListener("click", upgrades1)
@@ -69,17 +99,6 @@
         if (score >= 1000) {
             score = score - 1000;
             scoreperclick = scoreperclick + 100;
-            document.getElementById("counter").innerHTML = "Score: " + score;
-            console.log(score)
-        }
-    }
-    document.getElementById("prestige").addEventListener("click", prestige)
-
-    var scoreperclick = 1;
-    function prestige() {
-        if (score >= 1000000) {
-            score = score = 0;
-            scoreperclick = scoreperclick * 2;
             document.getElementById("counter").innerHTML = "Score: " + score;
             console.log(score)
         }

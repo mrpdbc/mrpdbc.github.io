@@ -1,0 +1,49 @@
+<!doctype HTML>
+<html>
+
+<head>
+
+
+
+</head>
+
+<body>
+
+    <img id="car" src="https://tse2.mm.bing.net/th/id/OIP.lYeg9S0J_QoSEQD3aPFd5wHaJG?rs=1&pid=ImgDetMain">
+
+    <p id="colorchange"> Click me! </p>
+
+    <img id="skeebidi" src="https://f4.bcbits.com/img/a2684133930_10.jpg">
+
+    <p id="counter"> 1 </p>
+</body>
+
+</html>
+
+<script>
+
+    document.getElementById("car").addEventListener("click", message)
+    function message() {
+        alert("cat!")
+    }
+
+    document.getElementById("colorchange").addEventListener("click", color)
+    function color() {
+        document.getElementById("colorchange").style.color = "blue";
+    }
+
+    document.getElementById("skeebidi").style.height = "200px";
+    document.getElementById("skeebidi").addEventListener("mouseover", grow)
+    function grow() {
+        document.getElementById("skeebidi").style.height = "500px";
+    }
+    
+    document.getElementById("counter").addEventListener("click", up)
+    var score = 0;
+    function up() {
+        score = score + 1;
+        document.getElementById("counter").innerHTML = score;
+        console.log(score)
+    }
+
+</script>
