@@ -45,17 +45,16 @@
         console.log(y)
         if (x > 1852||x < 0) {
             xchange = xchange * -1
-       
+        }
         if (y > 900|| y < 0) {
             ychange = ychange * -1
         }
-        
     }
-    setInterval(moveBox, 10)
+    
     function speedup()
     {
         xchange=xchange*2
         ychange=ychange*2
     }
-
+    setInterval(moveBox, 10)
 </script>
