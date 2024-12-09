@@ -1,0 +1,61 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <style>
+        #box {
+            width: 50px;
+            height: 50px;
+            background-color: gainsboro;
+            position: absolute;
+            top: y;
+            left: x;
+            border-radius: 15%;
+            border-width:5px;
+            border-style:solid;
+            border-color: black;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="box">
+        
+    </div>
+
+
+
+
+</body>
+
+<script>
+
+    document.getElementById("box").addEventListener("click", speedup)
+    var x = 2;
+    var xchange = 3;
+    var y = 5;
+    var ychange = 2;
+    function moveBox() {
+        x = x + xchange
+        document.getElementById("box").style.left = x + "px";
+        y = y + ychange
+        document.getElementById("box").style.top = y + "px";
+        console.log(y)
+        if (x > 1852||x < 0) {
+            xchange = xchange * -1
+       
+        if (y > 900|| y < 0) {
+            ychange = ychange * -1
+        }
+        
+    }
+    setInterval(moveBox, 10)
+    function speedup()
+    {
+        xchange=xchange*2
+        ychange=ychange*2
+    }
+
+</script>
